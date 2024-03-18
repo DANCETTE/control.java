@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class RectangleAreaCalculator {
+    private int length;
+    private int width;
+
+    public static void main(String[] args) {
+        RectangleAreaCalculator calculator = new RectangleAreaCalculator();
+        calculator.calculateArea();
+    }
+
+    public void calculateArea() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the length of the rectangle: ");
+        length = scanner.nextInt();
+
+        System.out.print("Enter the width of the rectangle: ");
+        width = scanner.nextInt();
+
+        int area = computeArea();
+        System.out.println("The area of the rectangle is: " + area);
+
+        scanner.close();
+    }
+
+    public int computeArea() {
+        return length * width;
+    }
+}
